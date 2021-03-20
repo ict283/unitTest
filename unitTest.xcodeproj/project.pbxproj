@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52797ABC260660490022CCAD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52797ABB260660490022CCAD /* main.cpp */; };
+		52797AC4260660950022CCAD /* Prime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52797AC2260660940022CCAD /* Prime.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		52797AB8260660490022CCAD /* unitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = unitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52797ABB260660490022CCAD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		52797AC2260660940022CCAD /* Prime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Prime.cpp; sourceTree = "<group>"; };
+		52797AC3260660950022CCAD /* Prime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prime.h; sourceTree = "<group>"; };
+		52797AC62606626E0022CCAD /* primeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = primeTest.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,19 @@
 			isa = PBXGroup;
 			children = (
 				52797ABB260660490022CCAD /* main.cpp */,
+				52797AC3260660950022CCAD /* Prime.h */,
+				52797AC2260660940022CCAD /* Prime.cpp */,
+				52797AC826066D1D0022CCAD /* test */,
 			);
 			path = unitTest;
+			sourceTree = "<group>";
+		};
+		52797AC826066D1D0022CCAD /* test */ = {
+			isa = PBXGroup;
+			children = (
+				52797AC62606626E0022CCAD /* primeTest.h */,
+			);
+			path = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52797ABC260660490022CCAD /* main.cpp in Sources */,
+				52797AC4260660950022CCAD /* Prime.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

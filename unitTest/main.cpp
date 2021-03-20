@@ -1,15 +1,11 @@
-//
-//  main.cpp
-//  unitTest
-//
-//  Created by Glenn Lum on 21/3/21.
-//  Copyright © 2021 Glenn Lum. All rights reserved.
-//
+// For review purposes only! Does not represent the actual solution!
 
+#include <stdio.h>
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+int main(void)
+{
+        return 0;
 }
