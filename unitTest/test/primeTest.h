@@ -39,6 +39,13 @@ void assertThat(string testName, bool result, bool expected);
 
 
 
-
+//evaluator
+void assertThat(string testName, bool result, bool expected){
+    cout<<setw(15)<<testName<<setw(15);
+    if(result==expected)
+        cout<"- PASSED"<<endl;
+    else
+        cout<"- FAILED"<<endl;
+}
 
 #endif /* primeTest_h */
