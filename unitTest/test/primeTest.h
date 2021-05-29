@@ -20,6 +20,7 @@
  */
 
 #include <iomanip>
+#include "Prime.h"
 
 using namespace std;
 
@@ -37,7 +38,26 @@ void assertThat(string testName, bool result, bool expected);
 
 /* implementation */
 
-
+void isPrime_testPrimeNum(){
+    Prime P;
+    assertThat ("isPrime_testPrimeNum", p.prime(2), true);
+}
+void isPrime_testNonPrimeNum(){
+    Prime P;
+    assertThat ("isPrime_testNonPrimeNum", p.prime(1), false);
+}
+void isPrime_testZero(){
+    Prime P;
+    assertThat ("isPrime_testZero", p.prime(0), false);
+}
+void isPrime_testNegativeNum(){
+    Prime P;
+    assertThat ("isPrime_testNegativeNum", p.prime(-1), false);
+}
+void isPrime_testNotADigit(){
+    Prime P;
+    assertThat ("isPrime_testNotADigit", p.prime('A'), false);
+}
 
 //evaluator
 void assertThat(string testName, bool result, bool expected){
