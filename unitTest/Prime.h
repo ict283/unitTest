@@ -14,6 +14,9 @@
 
 class Prime
 {
-    
+public:
+    Prime();
+    ~Prime();
+    bool isPrime(const int n);
 };
 #endif /* Prime_h */
