@@ -35,32 +35,40 @@ void assertThat(string testName, bool result, bool expected);
 
 /* implementation */
 
+void runAllPrimeTests(){
+    isPrime_testPrimeNumIsTrue();
+    isPrime_testNonPrimeNumIsFalse();
+    isPrime_testZeroIsFalse();
+    isPrime_testNegativeNumIsFalse();
+    isPrime_testNotADigitIsFalse();
+}
+
 void isPrime_testPrimeNumIsTrue(){
-    Prime P;
-    assertThat ("isPrime_testPrimeNumIsTrue", p.prime(2), true);
+    Prime p;
+    assertThat ("isPrime_testPrimeNumIsTrue", p.isPrime(2), true);
 }
 void isPrime_testNonPrimeNumIsFalse(){
-    Prime P;
-    assertThat ("isPrime_testNonPrimeNumIsFalse", p.prime(1), false);
+    Prime p;
+    assertThat ("isPrime_testNonPrimeNumIsFalse", p.isPrime(1), false);
 }
 void isPrime_testZeroIsFalse(){
-    Prime P;
-    assertThat ("isPrime_testZeroIsFalse", p.prime(0), false);
+    Prime p;
+    assertThat ("isPrime_testZeroIsFalse", p.isPrime(0), false);
 }
 void isPrime_testNegativeNumIsFalse(){
-    Prime P;
-    assertThat ("isPrime_testNegativeNumIsFalse", p.prime(-1), false);
+    Prime p;
+    assertThat ("isPrime_testNegativeNumIsFalse", p.isPrime(-1), false);
 }
 void isPrime_testNotADigitIsFalse(){
-    Prime P;
-    assertThat ("isPrime_testNotADigitIsFalse", p.prime('A'), false);
+    Prime p;
+    assertThat ("isPrime_testNotADigitIsFalse", p.isPrime('A'), false);
 }
 
 //evaluator
 void assertThat(string testName, bool result, bool expected){
-    cout<<setw(25)<<testName<<setw(25);
+    cout<<setw(35)<<testName<<setw(20);
     if(result==expected)
-        cout<"- PASSED"<<endl;
+        cout<<"- PASSED"<<endl;
     else
-        cout<"- FAILED"<<endl;
+        cout<<"- FAILED"<<endl;
 }
