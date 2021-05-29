@@ -1,8 +1,5 @@
 // For review purposes only! Does not represent the actual solution!
 
-#ifndef primeTest_h
-#define primeTest_h
-
 /* Test File */
 
 /*
@@ -67,5 +64,3 @@ void assertThat(string testName, bool result, bool expected){
     else
         cout<"- FAILED"<<endl;
 }
-
-#endif /* primeTest_h */
