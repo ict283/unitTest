@@ -4,6 +4,9 @@
 #define Prime_h
 
 #include <ctype.h>
+#include <string>
+
+using namespace std;
 
 /*
    A prime is:
@@ -14,6 +17,10 @@
 
 class Prime
 {
-    
+public:
+Prime();
+~Prime();
+bool isPrime(const int n);
+string dispIsPrime (const int n);
 };
 #endif /* Prime_h */

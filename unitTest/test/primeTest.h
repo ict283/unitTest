@@ -1,8 +1,5 @@
 // For review purposes only! Does not represent the actual solution!
 
-#ifndef primeTest_h
-#define primeTest_h
-
 /* Test File */
 
 /*
@@ -20,13 +17,75 @@
  */
 
 #include <iomanip>
+#include "Prime.h"
 
 using namespace std;
 
 /* headers */
 
+void runAllPrimeTests();
+
+void isPrime_testPrimeNumIsTrue();
+void isPrime_testNonPrimeNumIsFalse();
+void isPrime_testZeroIsFalse();
+void isPrime_testNegativeNumIsFalse();
+void isPrime_testNotADigitIsFalse();
+void dispIsPrime_testMessageIfTrue();
+void dispIsPrime_testMessageIfFalse();
+
+template <class T>
+void assertThat(string testName, T result, T expected);
 
 /* implementation */
 
+void runAllPrimeTests(){
+        isPrime_testPrimeNumIsTrue();
+        isPrime_testNonPrimeNumIsFalse();
+        isPrime_testZeroIsFalse();
+        isPrime_testNegativeNumIsFalse();
+        isPrime_testNotADigitIsFalse();
+        dispIsPrime_testMessageIfTrue();
+        dispIsPrime_testMessageIfFalse();
+}
 
-#endif /* primeTest_h */
+void isPrime_testPrimeNumIsTrue(){
+        Prime p;
+        assertThat<bool> ("isPrime_testPrimeNumIsTrue", p.isPrime(2), true);
+}
+void isPrime_testNonPrimeNumIsFalse(){
+        Prime p;
+        assertThat<bool> ("isPrime_testNonPrimeNumIsFalse", p.isPrime(1), false);
+}
+void isPrime_testZeroIsFalse(){
+        Prime p;
+        assertThat<bool> ("isPrime_testZeroIsFalse", p.isPrime(0), false);
+}
+void isPrime_testNegativeNumIsFalse(){
+        Prime p;
+        assertThat<bool> ("isPrime_testNegativeNumIsFalse", p.isPrime(-1), false);
+}
+void isPrime_testNotADigitIsFalse(){
+        Prime p;
+        assertThat<bool> ("isPrime_testNotADigitIsFalse", p.isPrime('A'), false);
+}
+
+void dispIsPrime_testMessageIfTrue(){
+        Prime p;
+        assertThat<string> ("dispIsPrime_testMessageIfTrue", p.dispIsPrime(2), "This is a prime.");
+}
+
+void dispIsPrime_testMessageIfFalse(){
+        Prime p;
+        assertThat<string> ("dispIsPrime_testMessageIfFalse", p.dispIsPrime(1), "This is not a prime.");
+}
+
+
+//evaluator *bonus*
+template <class T>
+void assertThat(string testName, T result, T expected){
+        cout<<setw(35)<<testName<<setw(20);
+        if(result==expected)
+                cout<<"- PASSED"<<endl;
+        else
+                cout<<"- FAILED"<<endl;
+}
