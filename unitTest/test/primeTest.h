@@ -26,7 +26,12 @@ using namespace std;
 /* headers */
 
 
+void assertThat(string testName, bool result, bool expected);
+
 /* implementation */
+
+
+
 
 
 #endif /* primeTest_h */
