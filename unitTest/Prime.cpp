@@ -27,3 +27,11 @@ bool Prime::isPrime(const int n){
     }
     return true;
 }
+
+string Prime::dispIsPrime(const int n){
+
+    if(isPrime(n))
+        return "This is a prime.";
+    else
+        return "This is not a prime.";
+}
