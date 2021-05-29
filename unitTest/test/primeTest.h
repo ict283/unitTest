@@ -25,6 +25,13 @@ using namespace std;
 
 /* headers */
 
+void runAllPrimeTests();
+
+void isPrime_testPrimeNum();
+void isPrime_testNonPrimeNum();
+void isPrime_testZero();
+void isPrime_testNegativeNum();
+void isPrime_testNotADigit();
 
 void assertThat(string testName, bool result, bool expected);
 
