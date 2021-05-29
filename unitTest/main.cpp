@@ -8,8 +8,8 @@ using namespace std;
 
 int main(void)
 {
-    //run unit test
-    runAllPrimeTests();
-    
-    return 0;
+        //run unit test
+        runAllPrimeTests();
+
+        return 0;
 }

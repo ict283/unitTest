@@ -18,9 +18,9 @@ using namespace std;
 class Prime
 {
 public:
-    Prime();
-    ~Prime();
-    bool isPrime(const int n);
-    string dispIsPrime (const int n);
+Prime();
+~Prime();
+bool isPrime(const int n);
+string dispIsPrime (const int n);
 };
 #endif /* Prime_h */
